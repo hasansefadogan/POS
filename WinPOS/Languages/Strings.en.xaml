@@ -1,0 +1,95 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="AppTitle">WinPOS</sys:String>
+    <sys:String x:Key="Theme">🌙/☀ Theme</sys:String>
+    <sys:String x:Key="Admin">Admin</sys:String>
+    <sys:String x:Key="Cart">Cart</sys:String>
+    <sys:String x:Key="Total">TOTAL</sys:String>
+    <sys:String x:Key="Cash">CASH</sys:String>
+    <sys:String x:Key="Card">CARD</sys:String>
+    <sys:String x:Key="Lang">Language</sys:String>
+
+    <sys:String x:Key="SelectCartItem">Please select an item in the cart first.</sys:String>
+    <sys:String x:Key="CashPaid">Cash payment received</sys:String>
+    <sys:String x:Key="CardPaid">Card payment received</sys:String>
+
+    <sys:String x:Key="CatPizza">Pizza</sys:String>
+    <sys:String x:Key="CatKebab">Kebab</sys:String>
+    <sys:String x:Key="CatDrinks">Drinks</sys:String>
+    <sys:String x:Key="CatDessert">Dessert</sys:String>
+
+    <sys:String x:Key="AdminTitle">Admin Panel</sys:String>
+    <sys:String x:Key="ProductName">Product Name</sys:String>
+    <sys:String x:Key="PriceCHF">Price (CHF)</sys:String>
+    <sys:String x:Key="VatPercent">VAT (%)</sys:String>
+    <sys:String x:Key="Category">Category</sys:String>
+    <sys:String x:Key="AddProduct">Add Product</sys:String>
+    <sys:String x:Key="NewCategory">New Category</sys:String>
+    <sys:String x:Key="AddCategory">Add Category</sys:String>
+    <sys:String x:Key="Categories">Categories</sys:String>
+    <sys:String x:Key="Products">Products</sys:String>
+
+    <sys:String x:Key="EmptyCategory">Category name cannot be empty.</sys:String>
+    <sys:String x:Key="SelectCategory">Select a category.</sys:String>
+    <sys:String x:Key="EmptyProduct">Product name cannot be empty.</sys:String>
+    <sys:String x:Key="BadPrice">Invalid price. Example: 12.50</sys:String>
+
+    <!-- Settings Window -->
+    <sys:String x:Key="Settings">Settings</sys:String>
+    <sys:String x:Key="General">General</sys:String>
+    <sys:String x:Key="ThemeLabel">Theme</sys:String>
+    <sys:String x:Key="LightTheme">Light Theme</sys:String>
+    <sys:String x:Key="DarkTheme">Dark Theme</sys:String>
+    <sys:String x:Key="QuickActions">Quick Actions</sys:String>
+    <sys:String x:Key="ZReport">Z Report</sys:String>
+    <sys:String x:Key="DefaultSaleType">Default Sale Type</sys:String>
+    <sys:String x:Key="ReceiptHeader">Receipt Header</sys:String>
+    <sys:String x:Key="ReceiptPrinter">Receipt Printer</sys:String>
+    <sys:String x:Key="PrinterNote">Note: If a printer is installed in Windows, it will be listed here (including Bixolon).</sys:String>
+    <sys:String x:Key="Close">Close</sys:String>
+
+    <!-- Extras -->
+    <sys:String x:Key="Extras">Extras</sys:String>
+    <sys:String x:Key="ExtrasDescription">You can select the extras you want</sys:String>
+    <sys:String x:Key="Cancel">Cancel</sys:String>
+    <sys:String x:Key="Add">Add</sys:String>
+    <sys:String x:Key="ExtraName">Extra Name</sys:String>
+    <sys:String x:Key="ExtraPrice">Extra Price (CHF) (0=Free)</sys:String>
+    <sys:String x:Key="AddExtra">Add Extra</sys:String>
+    <sys:String x:Key="ExtraCategoriesLabel">Which categories should this extra appear in?</sys:String>
+    <sys:String x:Key="MultiSelectHint">(Ctrl for multiple selection)</sys:String>
+
+    <!-- Sale Type Picker -->
+    <sys:String x:Key="SaleType">Sale Type</sys:String>
+    <sys:String x:Key="SelectSaleType">Select sale type</sys:String>
+    <sys:String x:Key="SaleTypeQuestion">Is this order Restaurant or Takeaway?</sys:String>
+    <sys:String x:Key="Restaurant">🪑 RESTAURANT (%7.7)</sys:String>
+    <sys:String x:Key="Takeaway">🥡 TAKEAWAY (%2.6)</sys:String>
+
+    <!-- Z Report Window -->
+    <sys:String x:Key="ZReportTitle">Z Report</sys:String>
+    <sys:String x:Key="Refresh">Refresh</sys:String>
+    <sys:String x:Key="Print">Print</sys:String>
+    <sys:String x:Key="Receipt80mm">Receipt (80mm)</sys:String>
+    <sys:String x:Key="XReport">X Report</sys:String>
+    <sys:String x:Key="TodaysSales">Today's Sales</sys:String>
+    <sys:String x:Key="Time">Time</sys:String>
+    <sys:String x:Key="Payment">Payment</sys:String>
+    <sys:String x:Key="TotalCHF">Total (CHF)</sys:String>
+    <sys:String x:Key="Vat26">VAT %2.6</sys:String>
+    <sys:String x:Key="Vat77">VAT %7.7</sys:String>
+    <sys:String x:Key="Vat">VAT</sys:String>
+
+    <!-- Admin Window - Additional -->
+    <sys:String x:Key="Product">Product</sys:String>
+    <sys:String x:Key="Price">Price</sys:String>
+    <sys:String x:Key="VatLabel">VAT</sys:String>
+    <sys:String x:Key="Cat">Cat.</sys:String>
+    <sys:String x:Key="VatHint">VAT (2.6 / 7.7)</sys:String>
+    <sys:String x:Key="NewClear">New (Clear)</sys:String>
+    <sys:String x:Key="Update">Update</sys:String>
+    <sys:String x:Key="Delete">Delete</sys:String>
+
+</ResourceDictionary>

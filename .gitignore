@@ -1,0 +1,33 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio temp files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# User-specific files
+*.rsuser
+
+# NuGet packages
+packages/
+*.nupkg
+**/packages/*
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Database
+*.db
+*.sqlite

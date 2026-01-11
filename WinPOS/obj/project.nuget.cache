@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "zNtJuhP1V6I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PizzaKebapHaus\\source\\repos\\WinPOS\\WinPOS\\WinPOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PizzaKebapHaus\\.nuget\\packages\\microsoft.data.sqlite\\10.0.1\\microsoft.data.sqlite.10.0.1.nupkg.sha512",
+    "C:\\Users\\PizzaKebapHaus\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.1\\microsoft.data.sqlite.core.10.0.1.nupkg.sha512",
+    "C:\\Users\\PizzaKebapHaus\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\PizzaKebapHaus\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "C:\\Users\\PizzaKebapHaus\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\PizzaKebapHaus\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}

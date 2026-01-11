@@ -1,0 +1,44 @@
+﻿<Window x:Class="WinPOS.SaleTypePickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource SaleType}"
+        WindowStartupLocation="CenterOwner"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        Background="{DynamicResource Bg}"
+        Padding="18">
+
+    <Border Background="{DynamicResource Panel}" CornerRadius="16" Padding="16">
+        <StackPanel Width="420">
+            <TextBlock Text="{DynamicResource SelectSaleType}"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0,0,0,10"/>
+
+            <TextBlock Text="{DynamicResource SaleTypeQuestion}"
+                       Foreground="{DynamicResource Text2}"
+                       Margin="0,0,0,16"/>
+
+            <Button Content="{DynamicResource Restaurant}"
+                    Height="64"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Margin="0,0,0,12"
+                    Style="{DynamicResource ModernButton}"
+                    Click="Restaurant_Click"/>
+
+            <Button Content="{DynamicResource Takeaway}"
+                    Height="64"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Margin="0,0,0,12"
+                    Style="{DynamicResource AccentButton}"
+                    Click="Takeaway_Click"/>
+
+            <Button Content="{DynamicResource Cancel}"
+                    Height="44"
+                    Style="{DynamicResource DangerButton}"
+                    Click="Cancel_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

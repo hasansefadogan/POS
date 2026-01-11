@@ -1,0 +1,267 @@
+﻿<Window x:Class="WinPOS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource AppTitle}"
+        WindowStartupLocation="CenterScreen"
+        MinWidth="1050" MinHeight="650"
+        Background="{DynamicResource Bg}">
+
+    <Grid Background="{DynamicResource Bg}" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- ===================== ÜST BAR ===================== -->
+        <Border Grid.Row="0"
+                Background="{DynamicResource Panel}"
+                CornerRadius="16"
+                Padding="12"
+                Margin="0,0,0,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Sol: Başlık + Saat -->
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{DynamicResource AppTitle}" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding ClockText}" Foreground="{DynamicResource Text2}" FontSize="14"/>
+                </StackPanel>
+
+                <!-- Ayarlar -->
+                <Button Grid.Column="4"
+        MinWidth="150"
+        Height="44"
+        Margin="0,0,10,0"
+        Style="{DynamicResource AccentButton}"
+        Command="{Binding OpenSettingsCommand}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="&#xE713;"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="18"
+                       Margin="0,0,8,0"/>
+                            <TextBlock Text="{DynamicResource Settings}" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </Grid>
+        </Border>
+
+        <!-- ===================== ANA ALAN ===================== -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.4*"/>
+                <ColumnDefinition Width="5.6*"/>
+                <ColumnDefinition Width="2.2*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!-- Sol + Orta (Kategori + Ürün + Ekstra paneli) -->
+            <Grid Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.2*"/>
+                    <ColumnDefinition Width="4.8*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="220"/>
+                </Grid.RowDefinitions>
+
+                <!-- ===================== KATEGORİLER ===================== -->
+                <Border Grid.Row="0" Grid.Column="0"
+                        Background="{DynamicResource Panel}"
+                        CornerRadius="16"
+                        Padding="10"
+                        Margin="0,0,10,10">
+                    <DockPanel LastChildFill="True">
+                        <TextBlock DockPanel.Dock="Top"
+                                   Text="{DynamicResource Categories}"
+                                   FontWeight="Bold"
+                                   Margin="4,0,0,8"/>
+
+                        <!-- 2 kolon: soldan dolunca sağa devam -->
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <ItemsControl ItemsSource="{Binding Categories}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Button Margin="4"
+                                                MinWidth="170"
+                                                Height="56"
+                                                Style="{DynamicResource ModernButton}"
+                                                Command="{Binding DataContext.SelectCategoryCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding}">
+                                            <DockPanel LastChildFill="True">
+                                                <TextBlock Text="{Binding Icon}" FontSize="18" Width="30" VerticalAlignment="Center"/>
+                                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                                            </DockPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </DockPanel>
+                </Border>
+
+                <!-- ===================== ÜRÜNLER ===================== -->
+                <Border Grid.Row="0" Grid.Column="1"
+                        Background="{DynamicResource Panel}"
+                        CornerRadius="16"
+                        Padding="10"
+                        Margin="0,0,0,10">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding Products}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel HorizontalAlignment="Stretch"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Width="180" Height="110" Margin="8"
+                                            FontWeight="SemiBold"
+                                            Style="{DynamicResource ModernButton}"
+                                            Command="{Binding DataContext.AddProductCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                            CommandParameter="{Binding}">
+                                        <TextBlock TextAlignment="Center">
+                                            <Run Text="{Binding Name}"/>
+                                            <LineBreak/>
+                                            <Run Text="{Binding Price, StringFormat={}{0:0.00} CHF}"/>
+                                        </TextBlock>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Border>
+
+                <!-- ===================== EKSTRALAR (ALTA) ===================== -->
+                <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                        Background="{DynamicResource Panel}"
+                        CornerRadius="16"
+                        Padding="10"
+                        Margin="0,0,10,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <DockPanel Grid.Row="0" LastChildFill="True">
+                            <TextBlock Text="{DynamicResource Extras}" FontWeight="Bold" FontSize="16" Margin="4,0,0,8"/>
+                            <TextBlock DockPanel.Dock="Right"
+                                       Text="{Binding SelectedCategoryName}"
+                                       Foreground="{DynamicResource Text2}"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,6,0"/>
+                        </DockPanel>
+
+                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                            <ItemsControl ItemsSource="{Binding CategoryExtras}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+
+                                <!-- Ekstra: küçük buton -->
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Button Width="96" Height="38" Margin="4"
+                                                FontSize="12"
+                                                Style="{DynamicResource ModernButton}"
+                                                Command="{Binding DataContext.ToggleExtraCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding}">
+                                            <TextBlock Text="{Binding DisplayText}" TextAlignment="Center"/>
+                                        </Button>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!-- ===================== SEPET ===================== -->
+            <Border Grid.Column="2"
+                    Background="{DynamicResource Panel}"
+                    CornerRadius="16"
+                    Padding="12">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0"
+                               Text="{DynamicResource Cart}"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="0,0,0,10"/>
+
+                    <ListBox Grid.Row="1"
+                             ItemsSource="{Binding Cart}"
+                             SelectedItem="{Binding SelectedCartItem}"/>
+
+                    <StackPanel Grid.Row="2" Margin="0,10,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="➕" Width="90" Height="54" Margin="0,0,10,0"
+                                    Style="{DynamicResource ModernButton}"
+                                    Command="{Binding IncreaseQtyCommand}"/>
+                            <Button Content="➖" Width="90" Height="54" Margin="0,0,10,0"
+                                    Style="{DynamicResource ModernButton}"
+                                    Command="{Binding DecreaseQtyCommand}"/>
+                            <Button Content="🗑" Width="90" Height="54"
+                                    Style="{DynamicResource DangerButton}"
+                                    Command="{Binding RemoveItemCommand}"/>
+                        </StackPanel>
+
+                        <TextBlock Text="{Binding VatModeText}"
+                                   Foreground="{DynamicResource Text2}"
+                                   Margin="0,10,0,0"/>
+
+                        <TextBlock FontSize="26" FontWeight="Bold" Margin="0,8,0,10"
+                                   Text="{Binding TotalText}"/>
+
+                        <Button Content="{DynamicResource Cash}" Height="60"
+                                Style="{DynamicResource SuccessButton}"
+                                Command="{Binding PayCashCommand}"/>
+
+                        <Button Content="{DynamicResource Card}" Height="60" Margin="0,10,0,0"
+                                Style="{DynamicResource AccentButton}"
+                                Command="{Binding PayCardCommand}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
