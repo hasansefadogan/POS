@@ -71,36 +71,52 @@
 
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="55" />
-                            <DataGridTextColumn Header="Ürün" Binding="{Binding Name}" Width="2*" />
-                            <DataGridTextColumn Header="Fiyat" Binding="{Binding Price, StringFormat={}{0:0.00}}" Width="90" />
-                            <DataGridTextColumn Header="KDV" Binding="{Binding Vat, StringFormat={}{0:0.0}}" Width="70" />
-                            <DataGridTextColumn Header="Kat." Binding="{Binding CategoryId}" Width="65" />
+                            <DataGridTextColumn Binding="{Binding Name}" Width="2*">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="{DynamicResource Product}"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Price, StringFormat={}{0:0.00}}" Width="90">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="{DynamicResource Price}"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Vat, StringFormat={}{0:0.0}}" Width="70">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="{DynamicResource VatLabel}"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding CategoryId}" Width="65">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="{DynamicResource Cat}"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
 
 
                     <!-- SAĞ: Form + Butonlar -->
                     <StackPanel Grid.Column="2" VerticalAlignment="Top">
-                        <TextBlock Text="Ürün Adı" />
+                        <TextBlock Text="{DynamicResource ProductName}" />
                         <TextBox Text="{Binding EditProductName, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
 
-                        <TextBlock Text="Fiyat (CHF)" />
+                        <TextBlock Text="{DynamicResource PriceCHF}" />
                         <TextBox Text="{Binding EditProductPrice, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
 
-                        <TextBlock Text="KDV (2.6 / 7.7)" />
+                        <TextBlock Text="{DynamicResource VatHint}" />
                         <TextBox Text="{Binding EditProductVat, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
 
-                        <TextBlock Text="Kategori" />
+                        <TextBlock Text="{DynamicResource Category}" />
                         <ComboBox ItemsSource="{Binding AdminCategories}"
                   SelectedItem="{Binding SelectedAdminCategory}"
                   DisplayMemberPath="Name"
                   Margin="0,4,0,14"/>
 
                         <StackPanel Orientation="Horizontal">
-                            <Button Content="Yeni (Temizle)" Width="120" Margin="0,0,10,0" Click="BtnProductNew_Click"/>
-                            <Button Content="Ekle" Width="90" Margin="0,0,10,0" Click="BtnProductAdd_Click"/>
-                            <Button Content="Güncelle" Width="110" Margin="0,0,10,0" Click="BtnProductUpdate_Click"/>
-                            <Button Content="Sil" Width="80" Click="BtnProductDelete_Click"/>
+                            <Button Content="{DynamicResource NewClear}" Width="120" Margin="0,0,10,0" Click="BtnProductNew_Click"/>
+                            <Button Content="{DynamicResource Add}" Width="90" Margin="0,0,10,0" Click="BtnProductAdd_Click"/>
+                            <Button Content="{DynamicResource Update}" Width="110" Margin="0,0,10,0" Click="BtnProductUpdate_Click"/>
+                            <Button Content="{DynamicResource Delete}" Width="80" Click="BtnProductDelete_Click"/>
                         </StackPanel>
 
                         <TextBlock Text="{Binding AdminStatusText}" Margin="0,12,0,0" Opacity="0.8"/>
@@ -133,24 +149,24 @@
 
                 <WrapPanel>
                     <StackPanel Margin="0,0,10,0">
-                        <TextBlock Text="Ekstra Adı"/>
+                        <TextBlock Text="{DynamicResource ExtraName}"/>
                         <TextBox x:Name="TxtExtraName" Width="220"/>
                     </StackPanel>
 
                     <StackPanel Margin="0,0,10,0">
-                        <TextBlock Text="Ekstra Fiyat (CHF) (0=Ücretsiz)"/>
+                        <TextBlock Text="{DynamicResource ExtraPrice}"/>
                         <TextBox x:Name="TxtExtraPrice" Width="180"/>
                     </StackPanel>
 
-                    <Button Content="Ekstra Ekle" Height="52" Width="150"
+                    <Button Content="{DynamicResource AddExtra}" Height="52" Width="150"
                             Style="{DynamicResource AccentButton}" Click="AddExtra_Click" Margin="0,18,0,0"/>
                 </WrapPanel>
 
                 <Border Grid.Column="1" Background="{DynamicResource Panel2}" CornerRadius="12" Padding="10" Margin="10,0,0,0">
                     <StackPanel>
-                        <TextBlock Text="Bu ekstra hangi kategorilerde görünsün?" FontWeight="Bold" Margin="0,0,0,6"/>
+                        <TextBlock Text="{DynamicResource ExtraCategoriesLabel}" FontWeight="Bold" Margin="0,0,0,6"/>
                         <ListBox x:Name="ListExtraCategories" SelectionMode="Multiple" Height="120"/>
-                        <TextBlock Text="(Ctrl ile çoklu seçebilirsin)" Foreground="{DynamicResource Text2}" Margin="0,6,0,0"/>
+                        <TextBlock Text="{DynamicResource MultiSelectHint}" Foreground="{DynamicResource Text2}" Margin="0,6,0,0"/>
                     </StackPanel>
                 </Border>
             </Grid>
@@ -180,7 +196,7 @@
 
             <Border Grid.Column="2" Background="{DynamicResource Panel}" CornerRadius="16" Padding="12">
                 <StackPanel>
-                    <TextBlock Text="Ekstralar" FontWeight="Bold" Margin="0,0,0,6"/>
+                    <TextBlock Text="{DynamicResource Extras}" FontWeight="Bold" Margin="0,0,0,6"/>
                     <ListBox x:Name="ListExtras"/>
                 </StackPanel>
             </Border>

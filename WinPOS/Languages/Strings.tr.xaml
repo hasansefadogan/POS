@@ -39,4 +39,60 @@
     <sys:String x:Key="EmptyProduct">Ürün adı boş olamaz.</sys:String>
     <sys:String x:Key="BadPrice">Fiyat hatalı. Örn: 12.50</sys:String>
 
+    <!-- Settings Window -->
+    <sys:String x:Key="Settings">Ayarlar</sys:String>
+    <sys:String x:Key="General">Genel</sys:String>
+    <sys:String x:Key="ThemeLabel">Tema</sys:String>
+    <sys:String x:Key="LightTheme">Açık Tema</sys:String>
+    <sys:String x:Key="DarkTheme">Koyu Tema</sys:String>
+    <sys:String x:Key="QuickActions">Hızlı İşlemler</sys:String>
+    <sys:String x:Key="ZReport">Z Raporu</sys:String>
+    <sys:String x:Key="DefaultSaleType">Varsayılan Satış Tipi</sys:String>
+    <sys:String x:Key="ReceiptHeader">Fiş Başlığı</sys:String>
+    <sys:String x:Key="ReceiptPrinter">Kasa Yazıcısı (Fiş)</sys:String>
+    <sys:String x:Key="PrinterNote">Not: Windows'ta yazıcı kuruluysa burada listelenir (Bixolon dahil).</sys:String>
+    <sys:String x:Key="Close">Kapat</sys:String>
+
+    <!-- Extras -->
+    <sys:String x:Key="Extras">Ekstralar</sys:String>
+    <sys:String x:Key="ExtrasDescription">İstediğin ekstraları seçebilirsin</sys:String>
+    <sys:String x:Key="Cancel">İptal</sys:String>
+    <sys:String x:Key="Add">Ekle</sys:String>
+    <sys:String x:Key="ExtraName">Ekstra Adı</sys:String>
+    <sys:String x:Key="ExtraPrice">Ekstra Fiyat (CHF) (0=Ücretsiz)</sys:String>
+    <sys:String x:Key="AddExtra">Ekstra Ekle</sys:String>
+    <sys:String x:Key="ExtraCategoriesLabel">Bu ekstra hangi kategorilerde görünsün?</sys:String>
+    <sys:String x:Key="MultiSelectHint">(Ctrl ile çoklu seçebilirsin)</sys:String>
+
+    <!-- Sale Type Picker -->
+    <sys:String x:Key="SaleType">Satış Türü</sys:String>
+    <sys:String x:Key="SelectSaleType">Satış türünü seçin</sys:String>
+    <sys:String x:Key="SaleTypeQuestion">Bu sipariş Restaurant mı Takeaway mi?</sys:String>
+    <sys:String x:Key="Restaurant">🪑 RESTAURANT (%7.7)</sys:String>
+    <sys:String x:Key="Takeaway">🥡 TAKEAWAY (%2.6)</sys:String>
+
+    <!-- Z Report Window -->
+    <sys:String x:Key="ZReportTitle">Z Raporu</sys:String>
+    <sys:String x:Key="Refresh">Yenile</sys:String>
+    <sys:String x:Key="Print">Yazdır</sys:String>
+    <sys:String x:Key="Receipt80mm">Fiş (80mm)</sys:String>
+    <sys:String x:Key="XReport">X Raporu</sys:String>
+    <sys:String x:Key="TodaysSales">Bugünkü Satışlar</sys:String>
+    <sys:String x:Key="Time">Saat</sys:String>
+    <sys:String x:Key="Payment">Ödeme</sys:String>
+    <sys:String x:Key="TotalCHF">Toplam (CHF)</sys:String>
+    <sys:String x:Key="Vat26">KDV %2.6</sys:String>
+    <sys:String x:Key="Vat77">KDV %7.7</sys:String>
+    <sys:String x:Key="Vat">KDV</sys:String>
+
+    <!-- Admin Window - Additional -->
+    <sys:String x:Key="Product">Ürün</sys:String>
+    <sys:String x:Key="Price">Fiyat</sys:String>
+    <sys:String x:Key="VatLabel">KDV</sys:String>
+    <sys:String x:Key="Cat">Kat.</sys:String>
+    <sys:String x:Key="VatHint">KDV (2.6 / 7.7)</sys:String>
+    <sys:String x:Key="NewClear">Yeni (Temizle)</sys:String>
+    <sys:String x:Key="Update">Güncelle</sys:String>
+    <sys:String x:Key="Delete">Sil</sys:String>
+
 </ResourceDictionary>

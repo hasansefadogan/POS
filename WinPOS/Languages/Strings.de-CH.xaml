@@ -35,7 +35,62 @@
     <sys:String x:Key="SelectCategory">Bitte Kategorie auswählen.</sys:String>
     <sys:String x:Key="EmptyProduct">Produktname darf nicht leer sein.</sys:String>
     <sys:String x:Key="BadPrice">Preis ungültig. Z.B.: 12.50</sys:String>
-   
+
+    <!-- Settings Window -->
+    <sys:String x:Key="Settings">Einstellungen</sys:String>
+    <sys:String x:Key="General">Allgemein</sys:String>
+    <sys:String x:Key="ThemeLabel">Design</sys:String>
+    <sys:String x:Key="LightTheme">Helles Design</sys:String>
+    <sys:String x:Key="DarkTheme">Dunkles Design</sys:String>
+    <sys:String x:Key="QuickActions">Schnellaktionen</sys:String>
+    <sys:String x:Key="ZReport">Z-Bericht</sys:String>
+    <sys:String x:Key="DefaultSaleType">Standard-Verkaufsart</sys:String>
+    <sys:String x:Key="ReceiptHeader">Quittungskopf</sys:String>
+    <sys:String x:Key="ReceiptPrinter">Kassendrucker (Quittung)</sys:String>
+    <sys:String x:Key="PrinterNote">Hinweis: Wenn ein Drucker in Windows installiert ist, wird er hier angezeigt (inkl. Bixolon).</sys:String>
+    <sys:String x:Key="Close">Schliessen</sys:String>
+
+    <!-- Extras -->
+    <sys:String x:Key="Extras">Extras</sys:String>
+    <sys:String x:Key="ExtrasDescription">Sie können die gewünschten Extras auswählen</sys:String>
+    <sys:String x:Key="Cancel">Abbrechen</sys:String>
+    <sys:String x:Key="Add">Hinzufügen</sys:String>
+    <sys:String x:Key="ExtraName">Extra-Name</sys:String>
+    <sys:String x:Key="ExtraPrice">Extra-Preis (CHF) (0=Gratis)</sys:String>
+    <sys:String x:Key="AddExtra">Extra hinzufügen</sys:String>
+    <sys:String x:Key="ExtraCategoriesLabel">In welchen Kategorien soll dieses Extra erscheinen?</sys:String>
+    <sys:String x:Key="MultiSelectHint">(Strg für Mehrfachauswahl)</sys:String>
+
+    <!-- Sale Type Picker -->
+    <sys:String x:Key="SaleType">Verkaufsart</sys:String>
+    <sys:String x:Key="SelectSaleType">Verkaufsart auswählen</sys:String>
+    <sys:String x:Key="SaleTypeQuestion">Ist diese Bestellung Restaurant oder Takeaway?</sys:String>
+    <sys:String x:Key="Restaurant">🪑 RESTAURANT (%7.7)</sys:String>
+    <sys:String x:Key="Takeaway">🥡 TAKEAWAY (%2.6)</sys:String>
+
+    <!-- Z Report Window -->
+    <sys:String x:Key="ZReportTitle">Z-Bericht</sys:String>
+    <sys:String x:Key="Refresh">Aktualisieren</sys:String>
+    <sys:String x:Key="Print">Drucken</sys:String>
+    <sys:String x:Key="Receipt80mm">Quittung (80mm)</sys:String>
+    <sys:String x:Key="XReport">X-Bericht</sys:String>
+    <sys:String x:Key="TodaysSales">Heutige Verkäufe</sys:String>
+    <sys:String x:Key="Time">Zeit</sys:String>
+    <sys:String x:Key="Payment">Zahlung</sys:String>
+    <sys:String x:Key="TotalCHF">Gesamt (CHF)</sys:String>
+    <sys:String x:Key="Vat26">MwSt %2.6</sys:String>
+    <sys:String x:Key="Vat77">MwSt %7.7</sys:String>
+    <sys:String x:Key="Vat">MwSt</sys:String>
+
+    <!-- Admin Window - Additional -->
+    <sys:String x:Key="Product">Produkt</sys:String>
+    <sys:String x:Key="Price">Preis</sys:String>
+    <sys:String x:Key="VatLabel">MwSt</sys:String>
+    <sys:String x:Key="Cat">Kat.</sys:String>
+    <sys:String x:Key="VatHint">MwSt (2.6 / 7.7)</sys:String>
+    <sys:String x:Key="NewClear">Neu (Leeren)</sys:String>
+    <sys:String x:Key="Update">Aktualisieren</sys:String>
+    <sys:String x:Key="Delete">Löschen</sys:String>
 
 
 </ResourceDictionary>

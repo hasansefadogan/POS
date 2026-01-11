@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WinPOS.ZReportWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Z Raporu" Height="680" Width="980"
+        Title="{DynamicResource ZReportTitle}" Height="680" Width="980"
         WindowStartupLocation="CenterOwner"
         Background="{DynamicResource Bg}">
 
@@ -36,29 +36,29 @@
                 </StackPanel>
 
                 <Button Grid.Column="1"
-        Content="Yenile"
+        Content="{DynamicResource Refresh}"
         Height="42" MinWidth="120" Margin="0,0,10,0"
         Style="{DynamicResource ModernButton}"
         Command="{Binding RefreshCommand}" Click="Button_Click"/>
 
                 <Button Grid.Column="3"
-        Content="Yazdır"
+        Content="{DynamicResource Print}"
         Height="42" MinWidth="120" Margin="0,0,10,0"
         Style="{DynamicResource AccentButton}"
         Command="{Binding PrintCommand}"/>
 
                 <Button Grid.Column="4"
-        Content="Kapat"
+        Content="{DynamicResource Close}"
         Height="42" MinWidth="120"
         Style="{DynamicResource DangerButton}"
         Command="{Binding CloseCommand}"/>
                 <Button Grid.Column="5"
-        Content="Fiş (80mm)"
+        Content="{DynamicResource Receipt80mm}"
         Height="42" MinWidth="120" Margin="0,0,10,0"
         Style="{DynamicResource AccentButton}"
         Command="{Binding ReceiptPrintCommand}"/>
                 <Button Grid.Column="2"
-        Content="X Raporu"
+        Content="{DynamicResource XReport}"
         Height="42" MinWidth="120" Margin="0,0,10,0"
         Style="{DynamicResource ModernButton}"
         Command="{Binding XReportCommand}"/>
@@ -79,28 +79,28 @@
 
             <Border Background="{DynamicResource Panel}" CornerRadius="16" Padding="12" Margin="0,0,10,0">
                 <StackPanel>
-                    <TextBlock Text="NAKİT" Foreground="{DynamicResource Text2}"/>
+                    <TextBlock Text="{DynamicResource Cash}" Foreground="{DynamicResource Text2}"/>
                     <TextBlock Text="{Binding CashText}" FontSize="22" FontWeight="Bold"/>
                 </StackPanel>
             </Border>
 
             <Border Grid.Column="1" Background="{DynamicResource Panel}" CornerRadius="16" Padding="12" Margin="0,0,10,0">
                 <StackPanel>
-                    <TextBlock Text="KART" Foreground="{DynamicResource Text2}"/>
+                    <TextBlock Text="{DynamicResource Card}" Foreground="{DynamicResource Text2}"/>
                     <TextBlock Text="{Binding CardText}" FontSize="22" FontWeight="Bold"/>
                 </StackPanel>
             </Border>
 
             <Border Grid.Column="2" Background="{DynamicResource Panel}" CornerRadius="16" Padding="12" Margin="0,0,10,0">
                 <StackPanel>
-                    <TextBlock Text="TOPLAM" Foreground="{DynamicResource Text2}"/>
+                    <TextBlock Text="{DynamicResource Total}" Foreground="{DynamicResource Text2}"/>
                     <TextBlock Text="{Binding GrandText}" FontSize="22" FontWeight="Bold"/>
                 </StackPanel>
             </Border>
 
             <Border Grid.Column="3" Background="{DynamicResource Panel}" CornerRadius="16" Padding="12">
                 <StackPanel>
-                    <TextBlock Text="KDV" Foreground="{DynamicResource Text2}"/>
+                    <TextBlock Text="{DynamicResource Vat}" Foreground="{DynamicResource Text2}"/>
                     <TextBlock Text="{Binding VatText}" FontSize="16" FontWeight="SemiBold"/>
                 </StackPanel>
             </Border>
@@ -114,7 +114,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Bugünkü Satışlar" FontWeight="Bold" Margin="4,0,0,10"/>
+                <TextBlock Text="{DynamicResource TodaysSales}" FontWeight="Bold" Margin="4,0,0,10"/>
 
                 <DataGrid Grid.Row="1"
                           ItemsSource="{Binding Sales}"
@@ -124,11 +124,31 @@
                           HeadersVisibility="Column"
                           RowHeight="34">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Saat" Binding="{Binding Time}" Width="90"/>
-                        <DataGridTextColumn Header="Ödeme" Binding="{Binding PaymentMethod}" Width="100"/>
-                        <DataGridTextColumn Header="Toplam (CHF)" Binding="{Binding GrandTotalText}" Width="130"/>
-                        <DataGridTextColumn Header="KDV %2.6" Binding="{Binding Vat26Text}" Width="120"/>
-                        <DataGridTextColumn Header="KDV %7.7" Binding="{Binding Vat77Text}" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding Time}" Width="90">
+                            <DataGridTextColumn.Header>
+                                <TextBlock Text="{DynamicResource Time}"/>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding PaymentMethod}" Width="100">
+                            <DataGridTextColumn.Header>
+                                <TextBlock Text="{DynamicResource Payment}"/>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding GrandTotalText}" Width="130">
+                            <DataGridTextColumn.Header>
+                                <TextBlock Text="{DynamicResource TotalCHF}"/>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Vat26Text}" Width="120">
+                            <DataGridTextColumn.Header>
+                                <TextBlock Text="{DynamicResource Vat26}"/>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Vat77Text}" Width="120">
+                            <DataGridTextColumn.Header>
+                                <TextBlock Text="{DynamicResource Vat77}"/>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
