@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="AppTitle">WinPOS</sys:String>
+    <sys:String x:Key="Theme">🌙/☀ Theme</sys:String>
+    <sys:String x:Key="Admin">Admin</sys:String>
+    <sys:String x:Key="Cart">Cart</sys:String>
+    <sys:String x:Key="Total">TOTAL</sys:String>
+    <sys:String x:Key="Cash">CASH</sys:String>
+    <sys:String x:Key="Card">CARD</sys:String>
+    <sys:String x:Key="Lang">Language</sys:String>
+
+    <sys:String x:Key="SelectCartItem">Please select an item in the cart first.</sys:String>
+    <sys:String x:Key="CashPaid">Cash payment received</sys:String>
+    <sys:String x:Key="CardPaid">Card payment received</sys:String>
+
+    <sys:String x:Key="CatPizza">Pizza</sys:String>
+    <sys:String x:Key="CatKebab">Kebab</sys:String>
+    <sys:String x:Key="CatDrinks">Drinks</sys:String>
+    <sys:String x:Key="CatDessert">Dessert</sys:String>
+
+    <sys:String x:Key="AdminTitle">Admin Panel</sys:String>
+    <sys:String x:Key="ProductName">Product Name</sys:String>
+    <sys:String x:Key="PriceCHF">Price (CHF)</sys:String>
+    <sys:String x:Key="VatPercent">VAT (%)</sys:String>
+    <sys:String x:Key="Category">Category</sys:String>
+    <sys:String x:Key="AddProduct">Add Product</sys:String>
+    <sys:String x:Key="NewCategory">New Category</sys:String>
+    <sys:String x:Key="AddCategory">Add Category</sys:String>
+    <sys:String x:Key="Categories">Categories</sys:String>
+    <sys:String x:Key="Products">Products</sys:String>
+
+    <sys:String x:Key="EmptyCategory">Category name cannot be empty.</sys:String>
+    <sys:String x:Key="SelectCategory">Select a category.</sys:String>
+    <sys:String x:Key="EmptyProduct">Product name cannot be empty.</sys:String>
+    <sys:String x:Key="BadPrice">Invalid price. Example: 12.50</sys:String>
+
+</ResourceDictionary>
