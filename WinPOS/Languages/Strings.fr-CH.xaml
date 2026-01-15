@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="AppTitle">WinPOS</sys:String>
+    <sys:String x:Key="Theme">🌙/☀ Thème</sys:String>
+    <sys:String x:Key="Admin">Admin</sys:String>
+    <sys:String x:Key="Cart">Panier</sys:String>
+    <sys:String x:Key="Total">TOTAL</sys:String>
+    <sys:String x:Key="Cash">ESPÈCES</sys:String>
+    <sys:String x:Key="Card">CARTE</sys:String>
+    <sys:String x:Key="Lang">Langue</sys:String>
+
+    <sys:String x:Key="SelectCartItem">Veuillez d’abord sélectionner un article dans le panier.</sys:String>
+    <sys:String x:Key="CashPaid">Paiement en espèces reçu</sys:String>
+    <sys:String x:Key="CardPaid">Paiement par carte reçu</sys:String>
+
+    <sys:String x:Key="CatPizza">Pizza</sys:String>
+    <sys:String x:Key="CatKebab">Kebab</sys:String>
+    <sys:String x:Key="CatDrinks">Boissons</sys:String>
+    <sys:String x:Key="CatDessert">Desserts</sys:String>
+
+    <sys:String x:Key="AdminTitle">Panneau d’administration</sys:String>
+    <sys:String x:Key="ProductName">Nom du produit</sys:String>
+    <sys:String x:Key="PriceCHF">Prix (CHF)</sys:String>
+    <sys:String x:Key="VatPercent">TVA (%)</sys:String>
+    <sys:String x:Key="Category">Catégorie</sys:String>
+    <sys:String x:Key="AddProduct">Ajouter un produit</sys:String>
+    <sys:String x:Key="NewCategory">Nouvelle catégorie</sys:String>
+    <sys:String x:Key="AddCategory">Ajouter une catégorie</sys:String>
+    <sys:String x:Key="Categories">Catégories</sys:String>
+    <sys:String x:Key="Products">Produits</sys:String>
+
+    <sys:String x:Key="EmptyCategory">Le nom de la catégorie ne peut pas être vide.</sys:String>
+    <sys:String x:Key="SelectCategory">Sélectionnez une catégorie.</sys:String>
+    <sys:String x:Key="EmptyProduct">Le nom du produit ne peut pas être vide.</sys:String>
+    <sys:String x:Key="BadPrice">Prix invalide. Exemple : 12.50</sys:String>
+
+</ResourceDictionary>
