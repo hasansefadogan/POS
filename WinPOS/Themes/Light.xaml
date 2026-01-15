@@ -1,0 +1,110 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Renkler -->
+    <SolidColorBrush x:Key="Bg" Color="#F6F7FB"/>
+    <SolidColorBrush x:Key="Panel" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Panel2" Color="#EEF1F7"/>
+    <SolidColorBrush x:Key="Text" Color="#121318"/>
+    <SolidColorBrush x:Key="Text2" Color="#5B606B"/>
+    <SolidColorBrush x:Key="Border" Color="#D7DBE6"/>
+
+    <SolidColorBrush x:Key="Accent" Color="#2F6FED"/>
+    <SolidColorBrush x:Key="Accent2" Color="#16A34A"/>
+    <SolidColorBrush x:Key="Danger" Color="#DC2626"/>
+
+    <!-- Genel -->
+    <CornerRadius x:Key="RadiusL">16</CornerRadius>
+    <CornerRadius x:Key="RadiusM">12</CornerRadius>
+
+    <!-- Modern Button -->
+    <Style x:Key="ModernButton" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource Panel}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="14,12"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{DynamicResource RadiusM}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource Panel2}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="0.98" ScaleY="0.98"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Accent Button -->
+    <Style x:Key="AccentButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+        <Setter Property="Background" Value="{DynamicResource Accent}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="SuccessButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+        <Setter Property="Background" Value="{DynamicResource Accent2}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="DangerButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+        <Setter Property="Background" Value="{DynamicResource Danger}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <!-- ListBox modern -->
+    <Style TargetType="ListBox">
+        <Setter Property="Background" Value="{DynamicResource Panel}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
+    </Style>
+
+    <Style TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
+    </Style>
+    <!-- Ürün kart butonu -->
+    <Style x:Key="ProductButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+        <Setter Property="Width" Value="180"/>
+        <Setter Property="Height" Value="110"/>
+        <Setter Property="Margin" Value="8"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="14,10"/>
+    </Style>
+
+    <!-- Küçük aksiyon butonu (+/-/sil) -->
+    <Style x:Key="MiniButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Height" Value="54"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+</ResourceDictionary>
